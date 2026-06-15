@@ -225,6 +225,9 @@ ul{list-style:none;}
 .division__logo--badge{height:clamp(72px,10vw,96px);object-position:left center;}
 .division__tag{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;color:#fff;background:var(--red);padding:.22rem .6rem;border-radius:999px;margin-bottom:.5rem;}
 .division__body p{color:var(--gray);max-width:42ch;}
+.division--soon .division__bg{filter:grayscale(.65) brightness(.85);}
+.division--soon .division__logo{filter:grayscale(.4) drop-shadow(0 4px 16px rgba(0,0,0,.7));opacity:.92;}
+.division__tag--soon{background:transparent;border:1px solid var(--line);color:var(--gray);}
 
 /* ============ 9 · BATALLAS ============ */
 .battles{padding:clamp(4rem,9vw,7rem) clamp(1.1rem,4vw,2.5rem);background:var(--bg-2);}
@@ -332,6 +335,18 @@ ul{list-style:none;}
 .legion__title{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.95;font-size:clamp(2.2rem,6vw,3.8rem);}
 .legion__lead{color:var(--gray);margin:1.1rem 0 1.8rem;max-width:50ch;font-size:1.05rem;}
 .legion__note{color:var(--gray-dim);font-size:.82rem;margin-top:1rem;}
+.legion__form{display:grid;gap:1rem;margin-top:1.8rem;}
+.legion__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.legion__field{display:flex;flex-direction:column;gap:.4rem;}
+.legion__field label{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;color:var(--gray);}
+.legion__field input,.legion__field select,.legion__field textarea{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);color:var(--white);font-family:var(--body);font-size:.95rem;padding:.7rem .8rem;width:100%;transition:border-color .2s var(--ease),box-shadow .2s var(--ease);}
+.legion__field textarea{resize:vertical;min-height:70px;}
+.legion__field select{appearance:none;-webkit-appearance:none;cursor:pointer;}
+.legion__field input:focus,.legion__field select:focus,.legion__field textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(225,29,34,.18);}
+.legion__field input::placeholder,.legion__field textarea::placeholder{color:var(--gray-dim);}
+.legion__field option:disabled{color:var(--gray-dim);}
+.legion__submit{margin-top:.4rem;justify-self:start;}
+@media (max-width:640px){.legion__row{grid-template-columns:1fr;}.legion__submit{justify-self:stretch;}}
 .legion__reqs{display:grid;gap:.9rem;}
 .legion__reqs li{display:flex;align-items:center;gap:.8rem;font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-size:.95rem;padding-bottom:.9rem;border-bottom:1px solid var(--line);}
 .legion__reqs li:last-child{border-bottom:0;}

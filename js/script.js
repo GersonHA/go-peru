@@ -315,10 +315,37 @@
     }
   }
 
+  /* -------- 0c. FORMULARIO "ÚNETE" -> WhatsApp del líder -------- */
+  function initJoinForm() {
+    var form = document.getElementById('joinForm');
+    if (!form) return;
+    var PHONE = '51927799321'; // WhatsApp del líder (sin + ni espacios)
+    function val(id) { var n = document.getElementById(id); return n ? n.value.trim() : ''; }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var lines = [];
+      lines.push('*Solicitud para unirse a GO PERÚ GAMING*');
+      lines.push('');
+      lines.push('Juego: ' + val('jfJuego'));
+      lines.push('Gamertag: ' + val('jfGamer'));
+      lines.push('Liga / Rango: ' + val('jfLiga'));
+      lines.push('Raza principal: ' + val('jfRaza'));
+      if (val('jfMmr')) lines.push('MMR aproximado: ' + val('jfMmr'));
+      lines.push('Actividad: ' + val('jfActividad'));
+      lines.push('Discord: ' + val('jfDiscord'));
+      if (val('jfCiudad')) lines.push('Ciudad: ' + val('jfCiudad'));
+      if (val('jfMsg')) { lines.push(''); lines.push('Mensaje: ' + val('jfMsg')); }
+      var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+    });
+  }
+
   initBattleTabs();
   renderBattles();
   renderRoster();
   startBattleClock();
+  initJoinForm();
 
   /* -------- 1. NAV -------- */
   var nav = document.getElementById('nav');

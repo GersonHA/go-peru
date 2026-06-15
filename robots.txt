@@ -1,0 +1,9 @@
+# GO PERÚ GAMING - robots.txt
+# Permitir el rastreo completo del sitio
+User-agent: *
+Allow: /
+
+# No indexar el panel de administración
+Disallow: /admin.html
+
+Sitemap: https://gersonha.github.io/go-peru/sitemap.xml

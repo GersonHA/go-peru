@@ -1,0 +1,31 @@
+# GO PERÚ GAMING
+
+> Organización competitiva de esports peruana fundada el 18 de abril de 2018 en Lima, Perú. Lema oficial: "Siempre Unidos". También conocida como GO PERÚ.
+
+GO PERÚ GAMING representa al Perú en competencias de esports en América y Europa. Nació de una comunidad de amigos apasionados por StarCraft II y hoy compite en varias divisiones.
+
+## Datos clave
+
+- Nombre: GO PERÚ GAMING (alternativo: GO PERÚ)
+- Tipo: organización / equipo de esports
+- Fundación: 18 de abril de 2018, en Lima, Perú
+- Lema: Siempre Unidos
+- Alcance: 2 continentes (América y Europa), más de 20 jugadores activos y más de 50 eventos competitivos
+
+## Divisiones (juegos)
+
+- StarCraft II (división principal, donde nació el equipo)
+- League of Legends
+- Left 4 Dead 2
+
+## Logros destacados
+
+- Campeones de la Rak'Shir Team League (Europa, 2023)
+- Clasificación a playoffs de la Star League Latam (2022)
+- Participación en la Berserker Team League y la Koprulu Team League (Europa, 2023)
+- Yawar Fiestas: torneos locales e iniciativas de desarrollo de la comunidad peruana
+
+## Enlaces
+
+- Sitio web oficial: https://gersonha.github.io/go-peru/
+- Facebook: https://www.facebook.com/share/1EQzMiRy17/

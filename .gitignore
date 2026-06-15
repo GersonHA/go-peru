@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+package-lock.json
+package.json
+
+# Herramientas de agentes (skills locales)
+.agents/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs y temporales
+*.log
+_t.js
+*.tmp
