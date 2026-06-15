@@ -14,7 +14,7 @@ window.GOPERU_DATA = {
       "rival": "[OsR] Old School Reborn",
       "result": "Campeones, Gersbot y Deathwork",
       "score": "4-0",
-      "stream": "https://www.twitch.tv/videos/2796945096",
+      "stream": "https://www.youtube.com/watch?v=Ohf1Nes8O_0",
       "challonge": "",
       "desc": "Torneo de -3500mmr registrado en la pagina oficial de GoPeru",
       "hidden": false,
