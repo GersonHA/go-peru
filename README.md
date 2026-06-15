@@ -64,7 +64,7 @@ Luego abre `http://localhost:8000`.
 | Torneos (agregar/editar/borrar) | **Panel `admin.html`** → Descargar content.js → reemplazar `data/content.js`. |
 | Roster: líder, jugadores y enlaces | **Panel `admin.html`** (incluye fotos y enlaces de transmisión). |
 | Foto de un jugador o del líder | En el panel, botón **Subir foto** (se optimiza y se incrusta sola) o pega una ruta/URL. Sin foto, muestra la inicial. |
-| Logo | El sitio usa `assets/img/logo.png` (versión web optimizada). El original es `NEWLOGO.png`; si lo cambias, vuelve a generar `logo.png`/`favicon.png`. |
+| Logo | El sitio usa `assets/img/logo.png` (versión web optimizada y con fondo transparente). Si subes un logo nuevo, hay que regenerar `logo.png`, `favicon.png` y el banner `assets/img/og-image.png` a partir de ese archivo. |
 | Estadísticas (contadores) | Texto en `index.html`, sección Stats. Usan `data-count` y `data-suffix`. |
 | Formulario de postulación | En Reclutamiento, el botón con `data-form` (`href="#"`): apunta a tu Google Forms o formulario propio. |
 | Redes (Discord/WhatsApp/Twitch) | En el footer, los `.footer__icon--soon` tienen `href="#"`: agrega las URLs y quita la clase `--soon`. |

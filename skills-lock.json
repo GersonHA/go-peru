@@ -13,6 +13,18 @@
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
     },
+    "humanize": {
+      "source": "humanizerai/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/humanize/SKILL.md",
+      "computedHash": "0c272016e5734530bf8604533aee2f293444c5d3b3e83eb234b1d65534159160"
+    },
+    "humanize-ai-text": {
+      "source": "alphaonedev/openclaw-graph",
+      "sourceType": "github",
+      "skillPath": "skills/community/humanize-ai-text/SKILL.md",
+      "computedHash": "1297fa94aec9d4e4a44ad866feb39485b954ac9ea81467a22e97f8285660154d"
+    },
     "local-seo": {
       "source": "kostja94/marketing-skills",
       "sourceType": "github",
