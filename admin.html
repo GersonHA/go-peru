@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>GO PERÚ · Panel de control</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body { padding-bottom: 6rem; }
+    .adm-wrap { max-width: 980px; margin-inline: auto; padding: 2rem clamp(1rem, 4vw, 2rem); }
+    .adm-head { display: flex; align-items: center; gap: .9rem; padding-block: 1.4rem; }
+    .adm-head img { width: 46px; height: 46px; object-fit: contain; filter: drop-shadow(0 0 8px var(--glow)); }
+    .adm-head h1 { font-family: var(--display); text-transform: uppercase; font-size: 1.5rem; letter-spacing: .04em; }
+    .adm-head span { color: var(--red); }
+
+    .adm-note {
+      background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--red);
+      border-radius: var(--radius); padding: 1rem 1.2rem; color: var(--gray); font-size: .95rem; margin-bottom: 1.6rem;
+    }
+    .adm-note strong { color: var(--white); }
+
+    .adm-toolbar { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 2rem; position: sticky; top: 0; z-index: 5;
+      background: rgba(10,10,11,.9); backdrop-filter: blur(10px); padding: .8rem 0; }
+
+    .adm-section { margin-bottom: 2.6rem; }
+    .adm-section h2 { font-family: var(--display); text-transform: uppercase; font-size: 1.4rem; letter-spacing: .03em; margin-bottom: 1rem; }
+    .adm-section h2::after { content: ""; display: block; width: 48px; height: 3px; background: var(--red); margin-top: .5rem; box-shadow: 0 0 14px var(--glow); }
+
+    .adm-card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg);
+      padding: 1.1rem; margin-bottom: 1rem; position: relative;
+    }
+    .adm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; }
+    .adm-field { display: flex; flex-direction: column; gap: .35rem; }
+    .adm-field.full { grid-column: 1 / -1; }
+    .adm-field label { font-family: var(--display); text-transform: uppercase; letter-spacing: .06em; font-size: .72rem; color: var(--gray); }
+    .adm-field input, .adm-field select, .adm-field textarea {
+      background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
+      color: var(--white); font-family: var(--body); font-size: .95rem; padding: .6rem .7rem; width: 100%;
+    }
+    .adm-field textarea { resize: vertical; min-height: 64px; }
+    .adm-field input:focus, .adm-field select:focus, .adm-field textarea:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(225,29,34,.18); }
+
+    .adm-card__del {
+      position: absolute; top: .7rem; right: .7rem;
+      background: transparent; border: 1px solid var(--line); color: var(--gray);
+      border-radius: var(--radius); padding: .35rem .7rem; cursor: pointer; font-family: var(--display);
+      text-transform: uppercase; letter-spacing: .05em; font-size: .72rem; transition: all .2s var(--ease);
+    }
+    .adm-card__del:hover { border-color: var(--red); color: var(--red); }
+
+    .adm-btn {
+      font-family: var(--display); text-transform: uppercase; letter-spacing: .06em; font-weight: 600;
+      font-size: .85rem; padding: .7rem 1.2rem; border-radius: var(--radius); cursor: pointer; border: 1px solid transparent;
+      transition: all .2s var(--ease); display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .adm-btn--primary { background: var(--red); color: #fff; }
+    .adm-btn--primary:hover { background: var(--red-bright); box-shadow: 0 8px 24px -8px var(--glow); }
+    .adm-btn--ghost { background: transparent; color: var(--white); border-color: var(--line); }
+    .adm-btn--ghost:hover { border-color: var(--red); color: var(--red); }
+    .adm-btn--add { background: transparent; color: var(--red); border: 1px dashed var(--red-deep); width: 100%; justify-content: center; padding: .9rem; }
+    .adm-btn--add:hover { background: rgba(225,29,34,.08); }
+
+    .adm-toast {
+      position: fixed; bottom: 1.4rem; left: 50%; transform: translateX(-50%) translateY(120%);
+      background: var(--surface-2); border: 1px solid var(--red-deep); color: var(--white);
+      padding: .9rem 1.4rem; border-radius: var(--radius); box-shadow: 0 12px 40px rgba(0,0,0,.6);
+      transition: transform .35s var(--ease); z-index: 50; font-size: .92rem;
+    }
+    .adm-toast.show { transform: translateX(-50%) translateY(0); }
+    .adm-back { color: var(--gray); font-family: var(--display); text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; }
+    .adm-back:hover { color: var(--red); }
+
+    /* Control de avatar (subir foto) */
+    .adm-avatar-ctl { display: flex; gap: 1rem; align-items: flex-start; }
+    .adm-avatar {
+      flex: none; width: 72px; height: 72px; border-radius: 50%; overflow: hidden;
+      display: grid; place-items: center; border: 1px solid var(--line);
+      background: radial-gradient(circle at 50% 30%, rgba(225,29,34,.35), transparent 60%), #0d0d0f;
+      font-family: var(--display); font-weight: 700; font-size: 1.7rem; color: rgba(246,246,247,.4);
+    }
+    .adm-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .adm-avatar-right { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: .5rem; }
+    .adm-avatar-btns { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .adm-mini {
+      font-family: var(--display); text-transform: uppercase; letter-spacing: .05em; font-size: .72rem;
+      padding: .45rem .8rem; border-radius: var(--radius); border: 1px solid var(--line);
+      background: var(--bg-2); color: var(--white); cursor: pointer; transition: all .2s var(--ease);
+    }
+    .adm-mini:hover { border-color: var(--red); color: var(--red); }
+    .adm-path {
+      background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
+      color: var(--gray); font-family: var(--body); font-size: .85rem; padding: .5rem .6rem; width: 100%;
+    }
+    .adm-path:focus { outline: none; border-color: var(--red); color: var(--white); }
+    .adm-hint { color: var(--gray-dim); font-size: .78rem; }
+
+    /* Switch (mostrar/ocultar) */
+    .adm-switch { margin-top: .2rem; }
+    .adm-switch__label { display: flex; align-items: center; gap: .7rem; cursor: pointer; font-family: var(--display); text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; color: var(--gray); }
+    .adm-switch input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .adm-switch__track { position: relative; flex: none; width: 44px; height: 24px; border-radius: 999px; background: var(--bg-2); border: 1px solid var(--line); transition: all .25s var(--ease); }
+    .adm-switch__track::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: var(--gray); transition: all .25s var(--ease); }
+    .adm-switch input:checked + .adm-switch__track { background: var(--red); border-color: var(--red); }
+    .adm-switch input:checked + .adm-switch__track::after { transform: translateX(20px); background: #fff; }
+    .adm-switch input:focus-visible + .adm-switch__track { box-shadow: 0 0 0 3px rgba(225,29,34,.25); }
+  </style>
+</head>
+<body>
+  <div class="adm-wrap">
+    <div class="adm-head">
+      <img src="assets/img/logo.png" alt="GO PERÚ" />
+      <h1>GO<span>PERÚ</span> · Panel de control</h1>
+    </div>
+
+    <p><a href="index.html" class="adm-back">← Volver al sitio</a></p>
+
+    <div class="adm-note">
+      <strong>Cómo funciona:</strong> edita los torneos y el roster aquí abajo. Cuando termines, pulsa
+      <strong>Descargar content.js</strong> y reemplaza el archivo <strong>data/content.js</strong> de tu proyecto
+      con el que se descargó. Vuelve a subir/desplegar y los cambios estarán en vivo. Este panel no guarda solo:
+      los cambios se aplican al sitio cuando reemplazas ese archivo.
+    </div>
+
+    <div class="adm-toolbar">
+      <button class="adm-btn adm-btn--primary" id="btnDownload">Descargar content.js</button>
+      <label class="adm-btn adm-btn--ghost" for="fileImport">Importar content.js</label>
+      <input type="file" id="fileImport" accept=".js,text/javascript" hidden />
+      <button class="adm-btn adm-btn--ghost" id="btnPreview" title="Abrir el sitio en otra pestaña">Ver sitio</button>
+    </div>
+
+    <!-- TORNEOS -->
+    <section class="adm-section">
+      <h2>Próximos Torneos</h2>
+      <div id="admTorneos"></div>
+      <button class="adm-btn adm-btn--add" id="addTorneo">+ Agregar torneo</button>
+    </section>
+
+    <!-- LÍDER -->
+    <section class="adm-section">
+      <h2>Líder</h2>
+      <div id="admLeader"></div>
+    </section>
+
+    <!-- JUGADORES -->
+    <section class="adm-section">
+      <h2>Jugadores</h2>
+      <div id="admPlayers"></div>
+      <button class="adm-btn adm-btn--add" id="addPlayer">+ Agregar jugador</button>
+    </section>
+  </div>
+
+  <div class="adm-toast" id="toast"></div>
+
+  <script src="data/content.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GO PERÚ GAMING | Legacy Edition - Siempre Unidos</title>
+  <meta name="description" content="GO PERÚ GAMING: organización competitiva peruana de esports forjada desde 2018. Historia, legado y logros en StarCraft II y más. Siempre Unidos." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:title" content="GO PERÚ GAMING | Legacy Edition" />
+  <meta property="og:description" content="Representando al Perú en los campos de batalla competitivos desde 2018." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/logo.png" />
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preload" href="assets/fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles-v2.css" />
+</head>
+<body>
+
+  <!-- Grano cinematográfico -->
+  <div class="grain" aria-hidden="true"></div>
+  <!-- Barra de progreso de scroll -->
+  <div class="scrollbar" id="scrollbar" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="GO PERÚ GAMING - Inicio">
+        <img src="assets/img/logo.png" alt="" class="nav__logo" aria-hidden="true" />
+        <span class="nav__name">GO<span class="accent">PERÚ</span> <em>GAMING</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navegación">
+        <a href="#batallas">Batallas</a>
+        <a href="#origen">Historia</a>
+        <a href="#timeline">Legado</a>
+        <a href="#divisiones">Divisiones</a>
+        <a href="#roster">Roster</a>
+        <a href="#legion" class="nav__cta">Únete</a>
+      </nav>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ 1 · HERO ============ -->
+    <section class="hero" id="hero">
+      <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
+      <div class="hero__aura" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow" data-hero="1">Organización competitiva de esports · Perú</p>
+          <h1 class="hero__title">
+            <span class="line" data-hero="2"><span>GO</span> <span class="accent">PERÚ</span></span>
+            <span class="line line--sub" data-hero="3">GAMING</span>
+          </h1>
+          <p class="hero__motto" data-hero="4">Siempre Unidos</p>
+          <p class="hero__statement" data-hero="5">Representando al Perú en los campos de batalla competitivos desde 2018.</p>
+          <div class="hero__actions" data-hero="6">
+            <a href="#origen" class="btn btn--primary">Ver nuestra historia</a>
+            <a href="#timeline" class="btn btn--ghost">Explorar legado</a>
+          </div>
+        </div>
+        <div class="hero__art" data-hero="3">
+          <img src="assets/img/logo.png" alt="Guerrero espartano, emblema de GO PERÚ GAMING" class="hero__mascot" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BATALLAS (destacado, cerca del inicio) ============ -->
+    <section class="battles" id="batallas">
+      <div class="section__head" data-reveal>
+        <span class="chapter__kicker">Calendario competitivo</span>
+        <h2 class="chapter__title">Batallas</h2>
+        <p class="section__sub">Sigue a GO PERÚ en sus competencias, en vivo y en su historial.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Batallas" id="battleTabs" data-reveal><!-- pestañas dinámicas --></div>
+      <div id="v2livetab" data-bpanel="live" hidden><!-- destacado EN VIVO (pestaña), desde content.js --></div>
+      <div class="battles__grid" id="v2battles" data-bpanel="prox"><!-- próximas, desde content.js --></div>
+      <div class="battles__grid" id="v2history" data-bpanel="hist" hidden><!-- historial, desde content.js --></div>
+    </section>
+
+    <!-- ============ 2 · EL ORIGEN ============ -->
+    <section class="chapter chapter--origin" id="origen">
+      <span class="chapter__index" aria-hidden="true">01</span>
+      <div class="chapter__inner">
+        <div class="chapter__text" data-reveal>
+          <span class="chapter__kicker">El Origen</span>
+          <h2 class="chapter__title">Forjados en la comunidad</h2>
+          <p class="chapter__lead">Todo gran legado empieza pequeño. El nuestro nació de la pasión gamer y la amistad.</p>
+          <p class="chapter__body">No hubo oficinas ni presupuestos. Hubo cabinas de internet, servidores de Discord y noches enteras compitiendo. Un grupo de amigos apasionados por StarCraft II encendió una chispa que jamás se apagó.</p>
+        </div>
+        <div class="chapter__aside" data-reveal>
+          <div class="datecard">
+            <span class="datecard__label">Fundación</span>
+            <span class="datecard__date">18 ABR</span>
+            <span class="datecard__year">2018</span>
+            <span class="datecard__note">Lima, Perú</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3 · EL ASCENSO ============ -->
+    <section class="chapter chapter--ascent" id="ascenso">
+      <span class="chapter__index" aria-hidden="true">02</span>
+      <div class="chapter__inner chapter__inner--center">
+        <div class="chapter__text chapter__text--wide" data-reveal>
+          <span class="chapter__kicker">El Ascenso</span>
+          <h2 class="chapter__title">De amigos a competidores</h2>
+          <p class="chapter__lead">La chispa se volvió disciplina. La amistad, un equipo.</p>
+        </div>
+        <ul class="pillars">
+          <li class="pillar" data-reveal><span class="pillar__num">01</span><h3>Clan wars</h3><p>Retos amistosos que despertaron el instinto competitivo.</p></li>
+          <li class="pillar" data-reveal><span class="pillar__num">02</span><h3>Práctica</h3><p>Sesiones intensas para pulir cada mecánica.</p></li>
+          <li class="pillar" data-reveal><span class="pillar__num">03</span><h3>Coaching mutuo</h3><p>Aprender unos de otros, crecer como uno solo.</p></li>
+          <li class="pillar" data-reveal><span class="pillar__num">04</span><h3>Disciplina</h3><p>Estrategia y constancia como forma de vida.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4 · CONSTRUYENDO UN LEGADO ============ -->
+    <section class="chapter chapter--legacy" id="legado">
+      <span class="chapter__index" aria-hidden="true">03</span>
+      <div class="chapter__inner chapter__inner--reverse">
+        <div class="chapter__text" data-reveal>
+          <span class="chapter__kicker">Construyendo un Legado</span>
+          <h2 class="chapter__title">Forjando alianzas</h2>
+          <p class="chapter__lead">Para ser los mejores, había que elevar a toda la región.</p>
+          <p class="chapter__body">Con el nombre de GO PERÚ grabado en el pecho, tejimos alianzas con clanes de antaño de la escena. Esa sinergia expandió la competitividad por toda Latinoamérica y nos convirtió en un nombre reconocido más allá de nuestras fronteras.</p>
+        </div>
+        <div class="chapter__aside" data-reveal>
+          <div class="badge-stack">
+            <div class="badge-stack__item"><span>+</span> Alianzas regionales</div>
+            <div class="badge-stack__item"><span>+</span> Nivel competitivo</div>
+            <div class="badge-stack__item"><span>+</span> Reconocimiento en Latam</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · TIMELINE DE LOGROS (vertical) ============ -->
+    <section class="timeline" id="timeline">
+      <div class="timeline__head">
+        <span class="chapter__kicker">Línea de tiempo</span>
+        <h2 class="chapter__title">El camino del legado</h2>
+      </div>
+      <ol class="vtimeline">
+        <li class="vtl" data-reveal><span class="vtl__year">2018</span><div class="vtl__card"><h3>GO PERÚ nace</h3><p>El 18 de abril de 2018 arranca oficialmente la organización.</p></div></li>
+        <li class="vtl" data-reveal><span class="vtl__year">2022</span><div class="vtl__card"><h3>Star League Latam</h3><p>Clasificación a playoffs, demostrando nivel regional.</p></div></li>
+        <li class="vtl" data-reveal><span class="vtl__year">2022</span><div class="vtl__card"><h3>Yawar Fiestas</h3><p>Torneos locales e iniciativa de desarrollo de comunidad.</p></div></li>
+        <li class="vtl vtl--champion" data-reveal><span class="vtl__year">2023</span><div class="vtl__card"><span class="vtl__tag">Campeones</span><h3>Rak'Shir Team League</h3><p>Nos coronamos en Europa, desafiando a los mejores en su propio terreno.</p></div></li>
+        <li class="vtl" data-reveal><span class="vtl__year">2023</span><div class="vtl__card"><h3>Berserker Team League</h3><p>Participación en una de las ligas más exigentes de Europa.</p></div></li>
+        <li class="vtl" data-reveal><span class="vtl__year">2023</span><div class="vtl__card"><h3>Koprulu Team League</h3><p>Dejando huella entre los clanes europeos de élite.</p></div></li>
+        <li class="vtl" data-reveal><span class="vtl__year">Hoy</span><div class="vtl__card"><h3>Expansión</h3><p>Nuevos esports y crecimiento continuo. El legado sigue escribiéndose.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- ============ 6 · DE PERÚ PARA EL MUNDO ============ -->
+    <section class="world" id="mundo">
+      <div class="world__inner">
+        <div class="world__copy" data-reveal>
+          <span class="chapter__kicker">Alcance internacional</span>
+          <h2 class="chapter__title">De Perú para el mundo</h2>
+          <p class="chapter__body">Llevamos el escudo del Perú más allá de nuestras fronteras, compitiendo y dejando huella en dos continentes.</p>
+        </div>
+        <div class="world__map-wrap" data-reveal>
+          <img class="world__map" src="assets/img/world-map.svg" alt="Mapa del mundo" loading="lazy" />
+          <svg class="world__arcs" viewBox="0 0 180 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <radialGradient id="node" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ff4b4f" /><stop offset="100%" stop-color="#e11d22" />
+              </radialGradient>
+            </defs>
+            <path class="arc" d="M52 60 Q 40 40 36 33" />
+            <path class="arc arc--2" d="M52 60 Q 76 34 90 27" />
+            <circle cx="36" cy="33" r="1.7" fill="url(#node)" />
+            <circle cx="90" cy="27" r="1.7" fill="url(#node)" />
+            <g class="node"><circle cx="52" cy="60" r="2.3" fill="url(#node)" /><circle cx="52" cy="60" r="2.3" class="node__pulse" /></g>
+            <text x="36" y="29.5" class="arc__label">AMÉRICA</text>
+            <text x="90" y="23.5" class="arc__label">EUROPA</text>
+            <text x="52" y="66.5" class="arc__label arc__label--main">PERÚ</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7 · LOS NÚMEROS ============ -->
+    <section class="numbers" id="numeros">
+      <div class="numbers__grid">
+        <div class="nstat" data-reveal><span class="nstat__num" data-count="2018" data-suffix="" data-plain="1">0</span><span class="nstat__label">Año de fundación</span></div>
+        <div class="nstat" data-reveal><span class="nstat__num" data-count="20" data-suffix="+">0</span><span class="nstat__label">Jugadores activos</span></div>
+        <div class="nstat" data-reveal><span class="nstat__num" data-count="50" data-suffix="+">0</span><span class="nstat__label">Eventos competitivos</span></div>
+        <div class="nstat" data-reveal><span class="nstat__num" data-count="2" data-suffix="">0</span><span class="nstat__label">Continentes</span></div>
+        <div class="nstat" data-reveal><span class="nstat__num" data-count="3" data-suffix="">0</span><span class="nstat__label">Divisiones competitivas</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 8 · DIVISIONES ACTIVAS ============ -->
+    <section class="divisions" id="divisiones">
+      <div class="section__head" data-reveal>
+        <span class="chapter__kicker">Campos de batalla</span>
+        <h2 class="chapter__title">Divisiones activas</h2>
+      </div>
+      <div class="divisions__grid">
+        <article class="division division--feature" data-reveal style="--img:url('assets/img/game-sc2.jpg')">
+          <div class="division__bg" aria-hidden="true"></div>
+          <img class="division__char" src="assets/img/protos-Photoroom.png" alt="" aria-hidden="true" />
+          <div class="division__body">
+            <span class="division__tag">División principal</span>
+            <img class="division__logo" src="assets/img/sc2-Photoroom.png" alt="StarCraft II" />
+            <p>Donde nació GO PERÚ. Estrategia en tiempo real y la disciplina que nos define.</p>
+          </div>
+        </article>
+        <article class="division" data-reveal style="--img:url('assets/img/game-l4d2.jpg')">
+          <div class="division__bg" aria-hidden="true"></div>
+          <div class="division__body">
+            <img class="division__logo division__logo--badge" src="assets/img/left-Photoroom.png" alt="Left 4 Dead 2" />
+            <span class="division__tag">División activa</span>
+            <p>Coordinación y sangre fría en equipo.</p>
+          </div>
+        </article>
+        <article class="division" data-reveal style="--img:url('assets/img/game-lol.jpg')">
+          <div class="division__bg" aria-hidden="true"></div>
+          <div class="division__body">
+            <img class="division__logo" src="assets/img/lol-Photoroom.png" alt="League of Legends" />
+            <span class="division__tag">División activa</span>
+            <p>Estrategia y teamfights en la grieta.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 10 · EL ROSTER ============ -->
+    <section class="roster" id="roster">
+      <div class="section__head" data-reveal>
+        <span class="chapter__kicker">La Legión</span>
+        <h2 class="chapter__title">El roster</h2>
+      </div>
+      <div id="v2leader"></div>
+      <div class="roster__rail" id="v2roster"><!-- desde data/content.js --></div>
+    </section>
+
+    <!-- ============ 11 · SALÓN DE LA GLORIA ============ -->
+    <section class="glory" id="gloria">
+      <div class="glory__bg" aria-hidden="true"></div>
+      <div class="section__head" data-reveal>
+        <span class="chapter__kicker">Sala de trofeos</span>
+        <h2 class="chapter__title">Salón de la gloria</h2>
+        <p class="section__sub">Años compitiendo al más alto nivel en América y Europa.</p>
+      </div>
+      <div class="glory__grid">
+        <article class="trophy trophy--big" data-reveal>
+          <img class="trophy__logo" src="assets/img/600px-RakShir_League.png" alt="Rak'Shir Team League" loading="lazy" />
+          <span class="trophy__rank">Campeones</span>
+          <h3>Rak'Shir Team League</h3>
+          <p>Nos coronamos en Europa, desafiando a los mejores en su propio terreno.</p>
+        </article>
+        <article class="trophy" data-reveal>
+          <span class="trophy__rank">Playoffs</span>
+          <h3>Star League Latam</h3>
+          <p>Clasificación y dominio en la escena de América.</p>
+        </article>
+        <article class="trophy" data-reveal>
+          <span class="trophy__rank">Internacional</span>
+          <h3>Berserker y Koprulu</h3>
+          <p>Participación en las ligas europeas más exigentes.</p>
+        </article>
+        <article class="trophy" data-reveal>
+          <span class="trophy__rank">Comunidad</span>
+          <h3>Yawar Fiestas</h3>
+          <p>Torneos locales que impulsaron a toda la comunidad peruana.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 12 · ÚNETE A LA LEGIÓN ============ -->
+    <section class="legion" id="legion">
+      <div class="legion__inner">
+        <div class="legion__copy" data-reveal>
+          <span class="chapter__kicker">El llamado</span>
+          <h2 class="legion__title">Únete a la Legión</h2>
+          <p class="legion__lead">GO PERÚ busca guerreros peruanos con hambre de competir. Si vives los esports y honras a tu equipo, este es tu lugar.</p>
+          <a href="#" class="btn btn--primary btn--lg" data-form>Postular a la Legión</a>
+          <p class="legion__note">El botón conectará con el formulario de postulación.</p>
+        </div>
+        <ul class="legion__reqs" data-reveal>
+          <li><span aria-hidden="true">✦</span> Ser peruano o residir en Perú</li>
+          <li><span aria-hidden="true">✦</span> Tener Discord y WhatsApp activos</li>
+          <li><span aria-hidden="true">✦</span> Mentalidad competitiva y constancia</li>
+          <li><span aria-hidden="true">✦</span> Respeto absoluto al equipo</li>
+          <li><span aria-hidden="true">✦</span> Participar en torneos internos y externos</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 13 · COMUNIDAD ============ -->
+    <section class="community" id="comunidad">
+      <div class="community__inner" data-reveal>
+        <div>
+          <span class="chapter__kicker">Hermandad</span>
+          <h2 class="chapter__title">Somos comunidad</h2>
+          <p class="chapter__body">Noticias, partidas, transmisiones y la familia GO PERÚ. La conversación nunca se detiene.</p>
+        </div>
+        <a href="https://www.facebook.com/share/1EQzMiRy17/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+          Síguenos en Facebook
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ 14 · DECLARACIÓN FINAL ============ -->
+    <section class="finale" id="final">
+      <canvas class="finale__embers" id="embers2" aria-hidden="true"></canvas>
+      <div class="finale__inner" data-reveal>
+        <p class="finale__line">Más que un clan.</p>
+        <p class="finale__line">Más que una comunidad.</p>
+        <p class="finale__line finale__line--big">Una legión que representa al <span class="accent">Perú</span>.</p>
+        <p class="finale__motto">Siempre Unidos</p>
+        <img src="assets/img/logo.png" alt="GO PERÚ GAMING" class="finale__logo" />
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="GO PERÚ GAMING" class="footer__logo" />
+        <div><span class="footer__name">GO<span class="accent">PERÚ</span> GAMING</span><span class="footer__motto">Siempre Unidos</span></div>
+      </div>
+      <nav class="footer__nav" aria-label="Navegación">
+        <a href="#origen">Historia</a>
+        <a href="#timeline">Legado</a>
+        <a href="#divisiones">Divisiones</a>
+        <a href="#roster">Roster</a>
+        <a href="#legion">Únete</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/share/1EQzMiRy17/" target="_blank" rel="noopener" aria-label="Facebook" class="footer__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__bar">© 2026 GO PERÚ GAMING · Siempre Unidos. Hecho con orgullo peruano.</p>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <script src="data/content.js"></script>
+  <script src="js/script-v2.js"></script>
+</body>
+</html>
