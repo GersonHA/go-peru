@@ -7,48 +7,19 @@ window.GOPERU_DATA = {
   "tournaments": [
     {
       "game": "StarCraft II",
-      "status": "Forzar En Vivo",
-      "startISO": "2026-07-14T22:18",
+      "status": "Automático",
+      "startISO": "2026-06-15T06:14",
       "durationMin": 180,
       "name": "Clan Wars -3500MMR",
-      "rival": "[UpeV]Unidos Por la verga",
-      "result": "Campeones, Gersbot y Alaraco",
-      "stream": "https://www.twitch.tv/gersbotgames",
+      "rival": "[OsR] Old School Reborn",
+      "result": "Campeones, Gersbot y Deathwork",
+      "score": "4-0",
+      "stream": "https://www.twitch.tv/videos/2796945096",
       "challonge": "https://challonge.com/es/2cg5oxyz?fbclid=IwY2xjawScKV5leHRuA2FlbQIxMABicmlkETFhclF2Sk1kb1NQNVNyUjlEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHlERBgHFdRkEwGasQQcdaR2QG7YiGAZjUq8QePdaKV0T_Mgq637iFX09F0h9_aem_5NUOnlWZahA_UzCwmfyIPw",
-      "desc": "Primer torneo registrado",
+      "desc": "Torneo de -3500mmr registrado en la pagina oficial de GoPeru",
       "hidden": false,
-      "date": "14 JUL 2026",
-      "time": "22:18"
-    },
-    {
-      "game": "Left 4 Dead 2",
-      "status": "Automático",
-      "startISO": "2026-07-26T19:30",
-      "durationMin": 180,
-      "name": "Lima Survival Cup",
-      "rival": "Los Olvidados",
-      "result": "",
-      "stream": "",
-      "challonge": "",
-      "desc": "",
-      "hidden": false,
-      "date": "26 JUL 2026",
-      "time": "19:30"
-    },
-    {
-      "game": "League of Legends",
-      "status": "Automático",
-      "startISO": "2026-08-09T18:00",
-      "durationMin": 180,
-      "name": "Copa Andina LoL",
-      "rival": "Cusco Dragons",
-      "result": "",
-      "stream": "",
-      "challonge": "",
-      "desc": "",
-      "hidden": false,
-      "date": "9 AGO 2026",
-      "time": "18:00"
+      "date": "15 JUN 2026",
+      "time": "06:14"
     }
   ],
   "roster": {

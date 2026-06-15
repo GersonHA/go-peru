@@ -230,7 +230,8 @@
     grid.appendChild(field('Duración estimada (min)', 'durationMin', (t.durationMin || 180), { type: 'number', min: 1, step: 5, placeholder: '180' }));
     grid.appendChild(field('Nombre del torneo', 'name', t.name));
     grid.appendChild(field('Rival', 'rival', t.rival));
-    grid.appendChild(field('Resultado (opcional)', 'result', t.result, { placeholder: 'Campeones, Top 4, 2-1...' }));
+    grid.appendChild(field('Resultado (opcional)', 'result', t.result, { placeholder: 'Campeones, Top 4...' }));
+    grid.appendChild(field('Marcador final (opcional)', 'score', t.score, { placeholder: '2-0  (GO PERÚ - rival)' }));
     grid.appendChild(field('Twitch / Stream (opcional)', 'stream', t.stream, { placeholder: 'https://twitch.tv/...' }));
     grid.appendChild(field('Challonge (opcional)', 'challonge', t.challonge, { placeholder: 'https://challonge.com/...' }));
     grid.appendChild(field('Descripción (opcional)', 'desc', t.desc, { type: 'textarea', full: true }));
@@ -415,7 +416,7 @@
   renderLeader();
 
   $('addTorneo').addEventListener('click', function () {
-    $('admTorneos').appendChild(torneoCard({ game: 'StarCraft II', status: 'Automático', startISO: '', durationMin: 180, date: '', time: '', name: '', rival: '', result: '', stream: '', challonge: '', desc: '', hidden: false }));
+    $('admTorneos').appendChild(torneoCard({ game: 'StarCraft II', status: 'Automático', startISO: '', durationMin: 180, date: '', time: '', name: '', rival: '', result: '', score: '', stream: '', challonge: '', desc: '', hidden: false }));
   });
   $('addPlayer').addEventListener('click', function () {
     $('admPlayers').appendChild(playerCard({ name: '', role: '', game: 'StarCraft II', initial: '', photo: '' }));
