@@ -20,6 +20,22 @@ window.GOPERU_DATA = {
       "hidden": false,
       "date": "14 JUN 2026",
       "time": "20:00"
+    },
+    {
+      "game": "StarCraft II",
+      "status": "Automático",
+      "startISO": "2026-06-27T13:04",
+      "durationMin": 120,
+      "name": "KTL - 4th division <4400MMR S(28)",
+      "rival": "FreedomHouse",
+      "result": "",
+      "score": "",
+      "stream": "https://www.twitch.tv/gersbotgames",
+      "challonge": "https://www.ovachamp.cz/turnaje/koprulu-team-league-ktl/ktl-4th-division-4#schedule",
+      "desc": "",
+      "hidden": false,
+      "date": "27 JUN 2026",
+      "time": "13:04"
     }
   ],
   "roster": {
